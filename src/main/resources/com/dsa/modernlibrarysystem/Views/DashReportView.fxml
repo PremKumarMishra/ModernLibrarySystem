@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashReportController" spacing="15" alignment="TOP_CENTER">
+    <Label styleClass="headerText" text="Report &amp; Analytics"/>
+    <TitledPane text="System Reports" collapsible="false">
+        <padding>
+            <Insets left="20" top="50" right="20" bottom="50"/>
+        </padding>
+        <VBox spacing="10">
+            <HBox spacing="10" alignment="CENTER">
+                <TitledPane text="Library Statistics" collapsible="false" minWidth="300">
+                    <padding>
+                        <Insets left="20" top="20" right="20" bottom="20"/>
+                    </padding>
+                    <VBox spacing="3">
+                        <HBox spacing="3">
+                            <Label fx:id="totalBooksLabel" text="Total Books: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/books_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="totalMembersLabel" text="Total Members: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/members_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="currentIssuedLabel" text="Currently Issued: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/book_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="overdueLabel" text="Overdue Books: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/overdue_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane text="Recent Activity Summery" collapsible="false" minWidth="300">
+                    <padding>
+                        <Insets left="20" top="20" right="20" bottom="20"/>
+                    </padding>
+                    <VBox spacing="3">
+                        <HBox spacing="3">
+                            <Label fx:id="issueMonthLabel" text="Issues This Month: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/month_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="returnMonthLabel" text="Returns This Month: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/return_book_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="newMembersLabel" text="New Members: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/new_member_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                        <HBox spacing="3">
+                            <Label fx:id="netActivityLabel" text="Net Activity: 5">
+                                <graphic>
+                                    <ImageView>
+                                        <image>
+                                            <Image url="@../Assets/Icons/heart_ico.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Label>
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+            </HBox>
+            <TitledPane text="Generate Reports" collapsible="false">
+                <padding>
+                    <Insets left="20" top="20" right="20" bottom="20"/>
+                </padding>
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="All Books Report" onAction="#generateBooksReport">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@../Assets/Icons/books_ico.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Members Report" onAction="#generateMembersReport">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@../Assets/Icons/members_ico.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Issued Books Report" onAction="#generateIssuedReport">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@../Assets/Icons/book_ico.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Overdue Books Report" onAction="#generateOverdueReport">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                    <Image url="@../Assets/Icons/overdue_ico.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+            </TitledPane>
+        </VBox>
+    </TitledPane>
+</VBox>

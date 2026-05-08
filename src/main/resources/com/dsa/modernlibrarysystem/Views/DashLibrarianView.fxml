@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashLibrarianController" stylesheets="@../Stylesheets/DashboardView.css" spacing="15" alignment="TOP_CENTER">
+    <Label styleClass="headerText" text="Librarians Management"/>
+    <HBox spacing="25">
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Add Librarian" onAction="#addLibrarian"/>
+        <Button fx:id="deactivateBt" text="Deactivate" onAction="#deactivateLibrarian"/>
+        <Button text="Refresh" onAction="#refreshList"/>
+    </HBox>
+    <TreeTableView fx:id="librarianTableView" styleClass="only-table-view">
+        <columns>
+            <TreeTableColumn fx:id="idCol" text="ID" resizable="false" reorderable="false" sortable="false"/>
+            <TreeTableColumn fx:id="userNameCol" text="Username" prefWidth="300" reorderable="false" resizable="false" sortable="false"/>
+            <TreeTableColumn fx:id="emailCol" text="Email" prefWidth="300" reorderable="false" resizable="false" sortable="false"/>
+            <TreeTableColumn fx:id="joinedDateCol" text="Joined Date" prefWidth="230" reorderable="" resizable="false" sortable="false"/>
+            <TreeTableColumn fx:id="lastLoginCol" text="Last Login" prefWidth="230" reorderable="" resizable="false" sortable="false"/>
+            <TreeTableColumn fx:id="statusCol" text="Status" prefWidth="217" reorderable="false" resizable="false" sortable="false"/>
+        </columns>
+    </TreeTableView>
+</VBox>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashHomeController" spacing="15" alignment="TOP_CENTER"
+      stylesheets="@../Stylesheets/DashboardHomeView.css">
+    <Label styleClass="headerText" text="Dashboard"/>
+    <HBox fx:id="cardHolder" spacing="25" alignment="CENTER">
+        <VBox styleClass="home-info-container" alignment="CENTER" spacing="7">
+            <padding>
+                <Insets right="50" left="50" top="30" bottom="30"/>
+            </padding>
+            <ImageView>
+                <image>
+                    <Image url="@../Assets/Icons/books_ico.png"/>
+                </image>
+            </ImageView>
+            <Label styleClass="home-info-text" text="Total Books"/>
+            <Label fx:id="tb_count" text="0"/>
+        </VBox>
+        <VBox styleClass="home-info-container" alignment="CENTER" spacing="7">
+            <padding>
+                <Insets right="50" left="50" top="30" bottom="30"/>
+            </padding>
+            <ImageView>
+                <image>
+                    <Image url="@../Assets/Icons/members_ico.png"/>
+                </image>
+            </ImageView>
+            <Label styleClass="home-info-text" text="Total Members"/>
+            <Label fx:id="mb_count" text="0"/>
+        </VBox>
+        <VBox styleClass="home-info-container" alignment="CENTER" spacing="7">
+            <padding>
+                <Insets right="50" left="50" top="30" bottom="30"/>
+            </padding>
+            <ImageView>
+                <image>
+                    <Image url="@../Assets/Icons/book_ico.png"/>
+                </image>
+            </ImageView>
+            <Label styleClass="home-info-text" text="Books Issued"/>
+            <Label fx:id="is_count" text="0"/>
+        </VBox>
+        <VBox styleClass="home-info-container" alignment="CENTER" spacing="7">
+            <padding>
+                <Insets right="50" left="50" top="30" bottom="30"/>
+            </padding>
+            <ImageView>
+                <image>
+                    <Image url="@../Assets/Icons/overdue_ico.png"/>
+                </image>
+            </ImageView>
+            <Label styleClass="home-info-text" text="Overdue Books"/>
+            <Label fx:id="ob_count" text="0"/>
+        </VBox>
+    </HBox>
+    <TitledPane text="Recent Activites" collapsible="false">
+        <VBox spacing="10">
+            <TreeTableView fx:id="activityTableView">
+                <columns>
+                    <TreeTableColumn fx:id="idCol" text="Issue ID" resizable="false" reorderable="false" sortable="false"/>
+                    <TreeTableColumn fx:id="titleCol" text="Book Title" minWidth="330" reorderable="false" sortable="false"/>
+                    <TreeTableColumn fx:id="memCol" text="Member Name" minWidth="250" reorderable="false" sortable="false"/>
+                    <TreeTableColumn fx:id="issuedByCol" text="Issued By" minWidth="250" reorderable="false" sortable="false"/>
+                    <TreeTableColumn fx:id="issuedDateCol" text="Issued Date" minWidth="250" reorderable="false" sortable="false"/>
+                    <TreeTableColumn fx:id="statusCol" text="Status" minWidth="178" resizable="false" reorderable="false" sortable="false"/>
+                </columns>
+            </TreeTableView>
+        </VBox>
+    </TitledPane>
+</VBox>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.RegisterController" alignment="CENTER">
+    <HBox alignment="CENTER" spacing="150">
+            <ImageView >
+                    <image>
+                        <Image url="@../Assets/Icons/LoginBanner.png"/>
+                    </image>
+            </ImageView>
+        <VBox fx:id="registerVBox" spacing="10">
+            <Label text="Admin Registration" style="-fx-text-fill:DodgerBlue;-fx-font-size:16pt;"/>
+            <TitledPane text="Register" collapsible="false">
+                <VBox spacing="10" alignment="CENTER">
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label style="-fx-text-fill:#B3B3B3;" text="Username: "/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="regUserField" promptText="enter username"/>
+                    </HBox>
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label style="-fx-text-fill:#B3B3B3;" text="Email: "/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="regEmailField" promptText="enter email"/>
+                    </HBox>
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label style="-fx-text-fill:#B3B3B3;" text="Password: "/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <PasswordField fx:id="regPasswordField" promptText="enter password"/>
+                    </HBox>
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label style="-fx-text-fill:#B3B3B3;" text="Confirm Password: "/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <PasswordField fx:id="regConfirmPasswordField" promptText="confirm password"/>
+                    </HBox>
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button text="Register" onAction="#registerAdmin">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../Assets/Icons/submit_ico.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button text="Back To Login" onAction="#returnToLogin">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../Assets/Icons/back_ico.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </VBox>
+            </TitledPane>
+
+            <TitledPane text="Password Requirement" collapsible="false">
+                <VBox>
+                    <Label text="Minimum 6 characters"/>
+                    <Label text="Use a strong,unique password"/>
+                </VBox>
+            </TitledPane>
+            <Region VBox.vgrow="ALWAYS"  prefHeight="120"/>
+        </VBox>
+    </HBox>
+</VBox>

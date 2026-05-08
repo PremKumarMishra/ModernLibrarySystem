@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:id="modalBox" stylesheets="@../Stylesheets/Modal.css" fx:controller="com.dsa.modernlibrarysystem.BookModalController" minHeight="330.0" prefWidth="500.0">
+    <HBox alignment="CENTER" fx:id="titleBar" prefHeight="25" onMousePressed="#onMousePressed"  onMouseDragged="#onMouseDragged">
+        <padding>
+            <Insets left="4" right="4"/>
+        </padding>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label text="Add Book"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="closeBt" prefWidth="15" prefHeight="15" minWidth="15" minHeight="15" onAction="#closeModal"/>
+    </HBox>
+    <VBox alignment="CENTER" spacing="10">
+        <padding>
+            <Insets left="20" top="20" right="20" bottom="20"/>
+        </padding>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="Title: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="titleField" prefWidth="200" promptText="enter book title"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="Author: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="authorField" prefWidth="200" promptText="enter book author"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="Category: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="categoryField" prefWidth="200" promptText="enter book cateogry"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="ISBN: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="isbnField" prefWidth="200" promptText="enter book ISBN"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="Total: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="totalField" prefWidth="200" promptText="enter book count"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label style="-fx-text-fill:#B3B3B3;" text="Publication Year: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="pubYearField" prefWidth="200" promptText="enter publication year"/>
+        </HBox>
+        <Button text="Add" prefWidth="70" prefHeight="30" onAction="#addBook"/>
+    </VBox>
+</VBox>

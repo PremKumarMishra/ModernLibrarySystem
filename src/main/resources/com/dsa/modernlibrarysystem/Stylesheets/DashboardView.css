@@ -1,0 +1,237 @@
+
+#headerContainer
+{
+    -fx-background-color: #0d0d14;
+    -fx-padding: 8 30 8 30;
+    -fx-border-color: transparent transparent #1e1e2d transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 4);
+}
+
+#headerText
+{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 20px;
+}
+.headerText
+{
+    -fx-text-fill: #e5e7eb;
+    -fx-font-weight:bold;
+    -fx-font-size:20pt;
+    -fx-effect: dropshadow(gaussian, rgba(61, 90, 254, 0.3), 25, 0.8, 0, 0);
+}
+
+#welcome_text
+{
+    -fx-text-fill: #8a8a9d;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 10; /* Spacing from title */
+}
+
+#sideBar
+{
+    -fx-min-width: 250px;
+    -fx-pref-width: 250px;
+    -fx-max-width: 250px;
+    -fx-min-height: 705px; /* Using 100% of the viewport height if possible */
+    -fx-max-height: Infinity;
+
+    -fx-background-color: #0d0d14; /* Slightly deeper than the main content */
+    -fx-padding: 20 0 0 0;
+    -fx-spacing: 5; /* Space between buttons */
+    -fx-border-color: transparent transparent transparent #1e1e2d ;
+    -fx-border-width: 0 0 0 1;
+    -fx-padding: 0;
+}
+
+#sideBar .button
+{
+    -fx-max-width: infinity;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 20 20 0; /* Rounded right edge for a modern look */
+    -fx-border-width:0 0 0 0;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 25 12 20;
+    -fx-text-fill: #8a8a9d;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#sideBar .button:hover
+{
+    -fx-background-color: rgba(61, 90, 254, 0.1); /* Subtle blue tint */
+    -fx-text-fill: #ffffff;
+}
+
+#logOutBt
+{
+    -fx-background-color: rgba(239, 68, 68, 0.1);
+    -fx-border-color: rgba(239, 68, 68, 0.3);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #ef4444;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+    transition-property:all;
+    transition-duration:0.5s;
+    transition-timing-function:ease-in-out;
+}
+
+#logOutBt:hover
+{
+    -fx-background-color: rgba(255, 69, 96, 0.1);
+    -fx-border-color: #ff4560;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 69, 96, 0.4), 20, 0, 0, 0);
+}
+
+#logOutBt:pressed
+{
+    -fx-background-color: rgba(255, 69, 96, 0.3);
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 69, 96, 0.2), 5, 0, 0, 0);
+}
+
+Label
+{
+    -fx-text-fill:white;
+}
+
+.only-table-view
+{
+    -fx-border-color:DodgerBlue;
+    -fx-border-radius:6pt;
+}
+
+/*EXPERIMENT */
+/* TreeTableView Container */
+.tree-table-view {
+    -fx-background-color: #1a1a26;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.tree-table-view .corner {
+    -fx-background-color: #1a1a26; /* Match your table background */
+}
+
+/* Header Styling */
+.tree-table-view .column-header-background {
+    -fx-background-color: #252535;
+    -fx-padding: 0 0 5 0;
+}
+
+.tree-table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+    -fx-border-color: #2d2d3d;
+    -fx-border-width: 0 1 0 0;
+}
+
+.tree-table-view .column-header .label {
+    -fx-text-fill: #8a8a9d;
+    -fx-font-size: 13px;
+    -fx-text-transform: uppercase;
+}
+
+/* Rows and Cells */
+.tree-table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #252535;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8px 0;
+}
+
+.tree-table-row-cell:odd {
+    -fx-background-color: #1d1d2b;
+}
+
+.tree-table-row-cell:hover {
+    -fx-background-color: #2a2a3d;
+}
+
+.tree-table-row-cell:selected {
+    -fx-background-color: #3d5afe; /* Modern accent blue */
+}
+
+.tree-table-cell {
+    -fx-text-fill: #d1d1d1;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent #444444 transparent transparent;
+    -fx-padding: 0 15px;
+}
+
+/* ScrollBar Refinement */
+.tree-table-view .scroll-bar:vertical,
+.tree-table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.tree-table-view .scroll-bar .thumb {
+    -fx-background-color: #44445a;
+    -fx-background-radius: 10px;
+}
+
+
+/* Inactive Row - Deep Alert Red */
+.tree-table-row-cell.inactive-row {
+    -fx-background-color: rgba(239, 68, 68, 0.15); /* Soft red tint */
+    -fx-border-color: rgba(239, 68, 68, 0.3) transparent rgba(239, 68, 68, 0.3) transparent;
+    -fx-border-width: 0.5 0 0.5 0;
+}
+
+/* Target cells to ensure text turns red/white for readability */
+.tree-table-row-cell.inactive-row .tree-table-cell {
+    -fx-text-fill: #fca5a5; /* Light salmon/red for better legibility on dark background */
+    -fx-font-weight: bold;
+}
+
+/* Hover - Increased Intensity */
+.tree-table-row-cell.inactive-row:filled:hover {
+    -fx-background-color: rgba(239, 68, 68, 0.3);
+    -fx-effect: dropshadow(three-pass-box, rgba(239, 68, 68, 0.2), 10, 0, 0, 0);
+}
+
+/* Selected - High Alert */
+.tree-table-row-cell.inactive-row:filled:selected {
+    -fx-background-color: #ef4444; /* Vivid Red */
+}
+
+/* Text color when row is fully selected */
+.tree-table-row-cell.inactive-row:filled:selected .tree-table-cell {
+    -fx-text-fill: #ffffff; /* White text for maximum contrast on bright red */
+}
+
+/* Active Row - Soft Green Glow */
+.tree-table-row-cell.active-row {
+    -fx-background-color: rgba(34, 197, 94, 0.12); /* Slightly subtler for better readability */
+    -fx-border-color: rgba(34, 197, 94, 0.3) transparent rgba(34, 197, 94, 0.3) transparent;
+    -fx-border-width: 0.5 0 0.5 0;
+}
+
+/* Ensure text inside the active row cells turns green */
+.tree-table-row-cell.active-row .tree-table-cell {
+    -fx-text-fill: #4ade80; /* A slightly brighter, more legible green for dark mode */
+    -fx-font-weight: bold;
+}
+
+/* Hover - Increased luminosity */
+.tree-table-row-cell.active-row:filled:hover {
+    -fx-background-color: rgba(34, 197, 94, 0.25);
+    /* Adding a subtle drop shadow effect on hover for depth */
+    -fx-effect: dropshadow(three-pass-box, rgba(34, 197, 94, 0.2), 10, 0, 0, 0);
+}
+
+/* Selected - High Contrast */
+.tree-table-row-cell.active-row:filled:selected {
+    -fx-background-color: #22c55e;
+}
+
+/* Ensure text stays readable when selected (turns white/dark depending on preference) */
+.tree-table-row-cell.active-row:filled:selected .tree-table-cell {
+    -fx-text-fill: #052e16; /* Deep dark green for high contrast against the bright background */
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" spacing="10" stylesheets="@../Stylesheets/DashboardAboutView.css" fx:controller="com.dsa.modernlibrarysystem.DashAboutController">
+    <Label styleClass="headerText" text="About"/>
+    <VBox fx:id="root" spacing="10" alignment="TOP_CENTER">
+        <ImageView fx:id="logoView">
+            <image>
+                <Image url="@../Assets/Icons/mitm_logo_trans.png" requestedWidth="170" requestedHeight="180" preserveRatio="true"/>
+            </image>
+        </ImageView>
+        <Label fx:id="collegeLabel" text="Modern Institute Of Technology And Management"/>
+        <Label fx:id="systemLabel" text="Library Management System"/>
+        <Label fx:id="internalLabel" text="(Internal Use Only)"/>
+        <Label fx:id="devLabel" text="Developed By: Prem Kumar Mishra"/>
+        <Hyperlink fx:id="projectLabel" text="Visit Project Repository" onAction="#openProjectURL">
+            <graphic>
+                <ImageView>
+                    <image>
+                        <Image url="@../Assets/Icons/github_ico.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Hyperlink>
+        <Label fx:id="copyrightLabel" text="© 2026 MITM. All rights reserved."/>
+    </VBox>
+</VBox>
+

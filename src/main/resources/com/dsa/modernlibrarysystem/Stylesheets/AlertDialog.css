@@ -1,0 +1,100 @@
+/* The main container */
+.alert-dialog {
+    -fx-background-color: #121217; /* Matches your sidebar */
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(61, 90, 254, 0.3); /* Subtle blue border */
+    -fx-border-radius: 12;
+    -fx-border-width: 1.5;
+}
+
+/* Custom Title Bar */
+.alert-title-box {
+    -fx-background-color: rgba(255, 255, 255, 0.03); /* Slightly lighter header */
+    -fx-padding: 10 15;
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.05) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.alert-title {
+    -fx-text-fill: #94a3b8;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 13px;
+}
+
+/* Content Area */
+.alert-content {
+    -fx-padding: 25;
+}
+
+.alert-message {
+    -fx-font-size: 15px;
+    -fx-text-alignment: CENTER;
+}
+
+/* Error: Vibrant Red/Coral */
+.msg-error {
+    -fx-text-fill: #ff5f5f;
+    -fx-effect: dropshadow(gaussian, rgba(255, 95, 95, 0.2), 10, 0, 0, 0);
+}
+
+/* Warning: Amber/Gold */
+.msg-warning {
+    -fx-text-fill: #ffbd44;
+    -fx-effect: dropshadow(gaussian, rgba(255, 189, 68, 0.2), 10, 0, 0, 0);
+}
+
+/* Information: Electric Blue */
+.msg-info {
+    -fx-text-fill: #3d5afe;
+    -fx-effect: dropshadow(gaussian, rgba(61, 90, 254, 0.2), 10, 0, 0, 0);
+}
+
+/* Confirmation: Emerald Green or Mint */
+.msg-confirm {
+    -fx-text-fill: #00ca4e;
+    -fx-effect: dropshadow(gaussian, rgba(0, 202, 78, 0.2), 10, 0, 0, 0);
+}
+
+.alert-button-close
+{
+    -fx-min-width:15px;
+    -fx-min-height:15px;
+    -fx-max-width:15px;
+    -fx-max-height:15px;
+    -fx-background-color: #ef4444;
+    -fx-background-radius: 50%;
+    -fx-cursor: hand;
+}
+
+.alert-button-close:hover {
+    -fx-background-color: #f87171;
+}
+
+/* Primary Action Button (Yes/Ok) */
+.alert-button-primary {
+    -fx-background-color: linear-gradient(to right, #3d5afe, #536dfe);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 25;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.alert-button-primary:hover {
+    -fx-background-color: #536dfe;
+}
+
+/* Secondary Action Button (No) */
+.alert-button-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: #4b5563;
+    -fx-border-radius: 5;
+    -fx-text-fill: #94a3b8;
+    -fx-padding: 8 25;
+    -fx-cursor: hand;
+}
+
+.alert-button-secondary:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}

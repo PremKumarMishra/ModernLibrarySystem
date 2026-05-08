@@ -1,0 +1,55 @@
+.home-info-container
+{
+    -fx-border-color:DodgerBlue;
+    -fx-border-width:2px;
+    -fx-border-radius:12px;
+    -fx-background-radius: 12px;
+    -fx-background-color:  linear-gradient(to bottom right, #0f172a, #020617);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 30, 0.6, 0, 0);
+
+}
+
+.home-info-container:hover
+{
+    -fx-effect: dropshadow(three-pass-box, rgba(59,130,246,0.25), 30, 0.6, 0, 0);
+}
+
+.home-info-text
+{
+    -fx-text-fill:GhostWhite;
+    -fx-font-weight:bold;
+    -fx-font-size:17pt;
+}
+
+#tb_count
+{
+    -fx-text-fill: #f97316;
+    -fx-font-weight:bold;
+    -fx-font-size:15pt;
+}
+
+#mb_count
+{
+    -fx-text-fill: #22c55e;
+    -fx-font-weight:bold;
+    -fx-font-size:15pt;
+}
+
+#is_count
+{
+    -fx-text-fill: #3b82f6;
+    -fx-font-weight:bold;
+    -fx-font-size:15pt;
+}
+
+#ob_count
+{
+    -fx-text-fill: #ec4899;
+    -fx-font-weight:bold;
+    -fx-font-size:15pt;
+}
+
+Label
+{
+    -fx-text-fill:white;
+}

@@ -1,0 +1,203 @@
+.root
+{
+    -fx-background-color: #09090b;
+    -fx-font-family: "Poppins", "Inter";
+}
+
+#titleBar
+{
+    -fx-background-color:#191919 ;
+}
+
+#title
+{
+    -fx-text-fill:#9E9E9E;
+}
+
+#minimizeBt
+{
+    -fx-background-radius:50%;
+    -fx-background-color:rgb(0,202,78);
+}
+
+#minimizeBt:hover
+{
+    -fx-background-color: rgb(0, 175, 68);
+}
+
+#closeBt
+{
+    -fx-background-radius:50%;
+    -fx-background-color:rgb(255,96,92);
+}
+
+#closeBt:hover
+{
+    -fx-background-color: rgb(230, 80, 75);
+}
+
+#welcomeText
+{
+    -fx-text-fill:DodgerBlue;
+    -fx-font-size:16pt;
+}
+
+.titled-pane {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+    -fx-background-color: #1e1e2d;
+    -fx-border-color: #3d5afe; /* Thinner, more subtle accent border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.titled-pane > .title {
+    -fx-border-color: #2d2d3d;
+    -fx-border-width: 0 0 1 0; /* Bottom border only */
+
+    -fx-background-color: linear-gradient(to right, #252535, #1e1e2d);
+    -fx-background-insets: 0;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-border-radius:8px 8px 0 0;
+    -fx-padding: 10px;
+}
+
+/* The Content Area (Where your TreeTableView lives) */
+.titled-pane > .content {
+    -fx-background-color: #1a1a26; /* Slightly darker than the header */
+    -fx-border-color: transparent;
+    -fx-padding: 0; /* Remove default padding so table hits the edges */
+    -fx-background-radius: 0 0 8px 8px;
+}
+
+.button {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: #e2e8f0;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+    -fx-padding: 8 15;
+    -fx-prompt-text-fill: #64748b;
+}
+
+.text-field:focused {
+    -fx-border-color: #3d5afe;
+    -fx-background-color: rgba(61, 90, 254, 0.05);
+}
+
+.combo-box
+{
+    -fx-background-color: #2B2B2B;
+    -fx-border-color: #3C3F41;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #E8E8E8;
+}
+
+.combo-box:hover
+{
+    -fx-border-color: #4A90E2;
+}
+
+.combo-box:focused
+{
+    -fx-border-color: DodgerBlue;
+}
+
+.combo-box:pressed
+{
+    -fx-background-color: #252525;
+}
+
+.combo-box .text-field
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E8E8;
+    -fx-prompt-text-fill: #8A8A8A;
+    -fx-border-width:0;
+}
+
+.combo-box-popup .list-view
+{
+    -fx-background-color: #2B2B2B;
+    -fx-border-color: #3C3F41;
+}
+
+.combo-box-popup .list-cell
+{
+    -fx-background-color: #2B2B2B;
+    -fx-text-fill: #E8E8E8;
+}
+
+.combo-box-popup .list-cell:hover
+{
+    -fx-background-color: #3A3F44;
+}
+
+.combo-box-popup .list-cell:selected
+{
+    -fx-background-color: DodgerBlue;
+    -fx-text-fill: white;
+}
+
+.combo-box .arrow-button
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 6 6 0;
+}
+
+/* 1. Hide the ugly gray background header */
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 10 10; /* Align with your sidebar */
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #0d0d14;
+}
+
+/* 2. Style the individual tabs */
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 10 20 10 20;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #94a3b8; /* Dimmer text for inactive tabs */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* 3. The "Selected" state (The blue indicator) */
+.tab-pane .tab:selected {
+    -fx-background-color: transparent;
+    /* Create that thin blue underline effect */
+    -fx-border-color: transparent transparent #3d5afe transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white; /* Active tab is bright white */
+}
+
+.tab-pane *
+{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

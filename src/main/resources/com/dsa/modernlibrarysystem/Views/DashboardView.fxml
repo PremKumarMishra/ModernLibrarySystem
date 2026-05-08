@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashboardController" spacing="10"
+      stylesheets="@../Stylesheets/DashboardView.css">
+    <HBox fx:id="headerContainer" alignment="CENTER_LEFT" spacing="10">
+        <Label fx:id="headerText" text="Library Management System">
+            <graphic>
+                <ImageView>
+                    <image>
+                        <Image url="@../Assets/Icons/book_pile_ico.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Label fx:id="welcome_text" text="" textAlignment="CENTER"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="logOutBt" text="Logout" onAction="#logOutFromSystem">
+            <graphic>
+                <ImageView>
+                    <image>
+                        <Image url="@../Assets/Icons/logout_ico.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+    <HBox spacing="10">
+        <VBox fx:id="sideBar" spacing="5">
+            <Button text="Dashboard" minWidth="120" onAction="#initialize">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/home_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="Books" minWidth="120" onAction="#switchViewToBooks">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/books_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="Members" minWidth="120" onAction="#switchViewToMembers">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/members_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="Issue/Return" minWidth="120" onAction="#switchViewToIssueReturn">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/book_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="Librarians" minWidth="120" onAction="#switchViewToLibrarians">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/librarian_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="Reports" minWidth="120" onAction="#switchViewToReports">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/statistics_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button text="About" minWidth="120" onAction="#switchViewToAbout">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../Assets/Icons/about_ico.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Region VBox.vgrow="ALWAYS"/>
+        </VBox>
+        <VBox fx:id="bodyArea" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"/>
+    </HBox>
+</VBox>

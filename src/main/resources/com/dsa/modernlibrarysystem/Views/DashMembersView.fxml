@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashMemberController" spacing="15" alignment="TOP_CENTER">
+    <Label styleClass="headerText" text="Members Management"/>
+    <HBox spacing="25" alignment="CENTER_LEFT">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Search members" minWidth="270"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Add Member" onAction="#addMember"/>
+        <Button text="Edit Member" onAction="#editMember"/>
+        <Button text="Delete Member" onAction="#deleteMember"/>
+        <Button text="Refresh" onAction="#refreshList"/>
+    </HBox>
+    <VBox spacing="10">
+        <TreeTableView fx:id="memberTableView" styleClass="only-table-view" >
+            <columns>
+                <TreeTableColumn fx:id="idCol" text="ID" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="nameCol" text="Name" prefWidth="280" reorderable="false" sortable="false"/>
+                <TreeTableColumn fx:id="emailCol" text="Email" prefWidth="304" reorderable="false" sortable="false"/>
+                <TreeTableColumn fx:id="regdCol" text="Regd" prefWidth="230" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="joinedDateCol" text="Joined Date" prefWidth="235" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="statusCol" text="Status" prefWidth="230" reorderable="false" resizable="false" sortable="false"/>
+            </columns>
+        </TreeTableView>
+    </VBox>
+</VBox>

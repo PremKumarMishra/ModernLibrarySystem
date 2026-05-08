@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.dsa.modernlibrarysystem.DashBookController" spacing="15" alignment="TOP_CENTER">
+    <Label styleClass="headerText" text="Book Management"/>
+    <HBox spacing="25" alignment="CENTER_LEFT">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Search books" minWidth="270"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Add Book" onAction="#addBook"/>
+        <Button text="Edit Book" onAction="#editBook"/>
+        <Button text="Delete Book" onAction="#deleteBook"/>
+        <Button text="Refresh" onAction="#refreshList"/>
+    </HBox>
+    <VBox spacing="10">
+        <TreeTableView fx:id="bookTableView" styleClass="only-table-view">
+            <columns>
+                <TreeTableColumn fx:id="idCol" text="ID" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="titleCol" text="Title" prefWidth="250" reorderable="false" sortable="false"/>
+                <TreeTableColumn fx:id="authorCol" text="Author" prefWidth="250" reorderable="false" sortable="false"/>
+                <TreeTableColumn fx:id="categoryCol" text="Category" prefWidth="250" reorderable="false" sortable="false"/>
+                <TreeTableColumn fx:id="isbnCol" text="ISBN" reorderable="false" prefWidth="107" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="totalCol" text="Total" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="availCol" text="Available" reorderable="false" resizable="" sortable="false"/>
+                <TreeTableColumn fx:id="pubCol" text="Publication Year" prefWidth="130" reorderable="false" resizable="false" sortable="false"/>
+                <TreeTableColumn fx:id="entryCol" text="Entry Date" prefWidth="130"  reorderable="false" resizable="false" sortable="false"/>
+            </columns>
+        </TreeTableView>
+    </VBox>
+</VBox>
