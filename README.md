@@ -13,13 +13,13 @@ A sophisticated, high-performance desktop application designed for modern librar
 
 ## 📸 Preview
 
-![Dashboard Overview](https://github.com/PremKumarMishra/ModernLibrarySystem/tree/main/Screenshots/img1.png)
+![Dashboard Overview](https://raw.githubusercontent.com/PremKumarMishra/ModernLibrarySystem/e112d52ff85388edabc7f6f6c57ac41be6c0f3ae/Screenshots/img1.png)
 *The main dashboard featuring real-time statistics and a dark, modern aesthetic.*
 
-![Book Issue Management](https://github.com/PremKumarMishra/ModernLibrarySystem/tree/main/Screenshots/img2.png)
+![Book Issue Management](https://raw.githubusercontent.com/PremKumarMishra/ModernLibrarySystem/e112d52ff85388edabc7f6f6c57ac41be6c0f3ae/Screenshots/img2.png)
 *Clean, intuitive interface for managing library memberships and contact details.*
 
-![Analytics Section](https://github.com/PremKumarMishra/ModernLibrarySystem/tree/main/Screenshots/img3.png)
+![Analytics Section](https://raw.githubusercontent.com/PremKumarMishra/ModernLibrarySystem/e112d52ff85388edabc7f6f6c57ac41be6c0f3ae/Screenshots/img3.png)
 *Visualized data tracking library growth and book circulation trends.*
 
 ## 🛠️ Tech Stack
@@ -36,12 +36,12 @@ A sophisticated, high-performance desktop application designed for modern librar
     git clone https://github.com/PremKumarMishra/ModernLibrarySystem.git
     ```
 2.  **Database Configuration:**
-    * Ensure `sqlite3` is installed or use the provided `.db` file in the resources folder.
+    * Ensure `sqlite3` is installed or use the provided `.db` file in the App folder.
     * The application automatically initializes tables on the first run.
 3.  **Run the Application:**
     * Open the project in your favorite IDE (IntelliJ IDEA recommended).
     * Ensure JavaFX SDK is configured in your project structure.
-    * Run the `Main.java` file.
+    * Run the `Launcher.java` file.
 
 ## 📄 License
 This project is for academic and professional demonstration. All rights reserved.
