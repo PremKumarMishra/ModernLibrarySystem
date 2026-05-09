@@ -31,6 +31,7 @@ public class MainController {
     {
         SceneManager.setRoot(bodyArea);
         SceneManager.switchView("Views/LoginView.fxml");
+
 //        returnToLogin();
     }
 
