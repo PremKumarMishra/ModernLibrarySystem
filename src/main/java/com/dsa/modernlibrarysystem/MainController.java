@@ -30,7 +30,7 @@ public class MainController {
     public void initialize()
     {
         SceneManager.setRoot(bodyArea);
-        SceneManager.switchView("Views/DashboardView.fxml");
+        SceneManager.switchView("Views/LoginView.fxml");
 //        returnToLogin();
     }
 
